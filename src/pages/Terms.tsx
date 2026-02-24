@@ -7,7 +7,7 @@ export default function Terms() {
       as="article"
       className="legalPage"
       eyebrow="Legal"
-      title="Terms of Use for Sirina Chat"
+      title="Terms of Use"
       subtitle="Last updated: February 24, 2026"
     >
 

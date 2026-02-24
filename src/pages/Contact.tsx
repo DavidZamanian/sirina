@@ -26,7 +26,7 @@ export default function Contact() {
     <PageTemplate
       className="contactPage"
       eyebrow="Support"
-      title="Contact Sirina Chat"
+      title="Contact"
       subtitle="Reach us for product help, legal requests, or partnership discussions."
     >
 

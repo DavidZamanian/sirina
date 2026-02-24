@@ -7,7 +7,7 @@ export default function Privacy() {
       as="article"
       className="legalPage"
       eyebrow="Legal"
-      title="Privacy Policy for Sirina Chat"
+      title="Privacy Policy"
       subtitle="Last updated: February 24, 2026"
     >
 
