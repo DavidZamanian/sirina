@@ -1,9 +1,11 @@
 import { FormEvent, useMemo, useState } from "react";
 import PageTemplate from "@/components/PageTemplate/PageTemplate";
-
-const supportEmail = "support@repigo.se";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail/ObfuscatedEmail";
+import { getMailtoPrefix, getSupportEmail } from "@/utils/email";
 
 export default function Contact() {
+  const supportEmail = useMemo(() => getSupportEmail(), []);
+  const mailtoPrefix = useMemo(() => getMailtoPrefix(), []);
   const [subject, setSubject] = useState("General Support Request");
   const [message, setMessage] = useState("");
 
@@ -12,8 +14,8 @@ export default function Contact() {
       subject,
       body: message,
     });
-    return `mailto:${supportEmail}?${params.toString()}`;
-  }, [message, subject]);
+    return `${mailtoPrefix}${supportEmail}?${params.toString()}`;
+  }, [mailtoPrefix, message, subject, supportEmail]);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -31,14 +33,12 @@ export default function Contact() {
       <div className="contactGrid">
         <article className="contactCard">
           <h2>Email</h2>
+          <p>General support: <ObfuscatedEmail /></p>
           <p>
-            General support: <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
+            Legal: <ObfuscatedEmail />
           </p>
           <p>
-            Legal: <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
-          </p>
-          <p>
-            Privacy: <a href={`mailto:${supportEmail}`}>{supportEmail}</a>
+            Privacy: <ObfuscatedEmail />
           </p>
         </article>
 

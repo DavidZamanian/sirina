@@ -1,4 +1,5 @@
 import PageTemplate from "@/components/PageTemplate/PageTemplate";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail/ObfuscatedEmail";
 
 export default function Terms() {
   return (
@@ -204,7 +205,7 @@ export default function Terms() {
         <h2>15. Contact</h2>
         <p>
           If you have questions about these Terms, contact us at{" "}
-          <a href="mailto:support@repigo.se">support@repigo.se</a>.
+          <ObfuscatedEmail />.
         </p>
       </section>
     </PageTemplate>

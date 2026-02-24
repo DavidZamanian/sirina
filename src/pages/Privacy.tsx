@@ -1,4 +1,5 @@
 import PageTemplate from "@/components/PageTemplate/PageTemplate";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail/ObfuscatedEmail";
 
 export default function Privacy() {
   return (
@@ -176,7 +177,7 @@ export default function Privacy() {
         <h2>12. Contact</h2>
         <p>
           If you have privacy questions, contact us at{" "}
-          <a href="mailto:support@repigo.se">support@repigo.se</a>.
+          <ObfuscatedEmail />.
         </p>
       </section>
     </PageTemplate>
