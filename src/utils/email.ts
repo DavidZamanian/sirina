@@ -10,5 +10,5 @@ export function getSupportEmail() {
 }
 
 export function getMailtoPrefix() {
-  return ["mail", "to"].join(":");
+  return ["mail", "to"].join("") + ":";
 }
